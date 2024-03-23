@@ -3,6 +3,22 @@ function selectCourse(courseCode, courseName) {
     localStorage.setItem("selectedCourseName", courseName);
 
     var nxtPg = "/" + courseCode + "/semesters";
+    smoothChange(nxtPg);
+}
+
+function updatePageContent(content) {
+    document.open();
+    document.write(content);
+    document.close();
+}
+
+
+function goBack() {
+    window.history.back();
+}
+
+function smoothChange(url){
+    var nxtPg = url;
     var nxtpgReq = new XMLHttpRequest();
     nxtpgReq.open('GET', nxtPg, true);
     nxtpgReq.onreadystatechange = function() {
@@ -12,10 +28,4 @@ function selectCourse(courseCode, courseName) {
         }
     };
     nxtpgReq.send();
-}
-
-function updatePageContent(content) {
-    document.open();
-    document.write(content);
-    document.close();
 }

@@ -7,7 +7,8 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link
             href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
             rel="stylesheet"
@@ -29,7 +30,7 @@
 </nav>
 <div id="centerwelcome">
     <div id="welcomebox">
-        <p id="wlcmbit">Welcome to Better BIT</p>
+        <button id="goback" onclick="smoothChange('/')"><i class="fas fa-arrow-left"></i></button>
         <p id="selectcrs">Select your Semester</p>
         <p id="selectsms">(You can come back here after selecting)</p>
         <hr/>

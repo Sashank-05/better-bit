@@ -32,3 +32,4 @@ if (screen.width == 360) {
   navbar.innerHTML = `<a href="#"><span class="material-icons" style="color: ${fg}; height: 15px;">menu</span></a>`;
   navbar.style.width = "10%";
 }
+

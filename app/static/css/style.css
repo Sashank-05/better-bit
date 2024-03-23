@@ -108,3 +108,13 @@ nav {
 hr {
   border-color: var(--fg);
 }
+
+#goback {
+  background-color: var(--bg);
+  border-radius: 0px;
+  font-size: 30px;
+}
+
+#goback:hover {
+  background-color: var(--color3);
+}
