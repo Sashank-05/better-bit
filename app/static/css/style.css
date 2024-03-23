@@ -23,7 +23,7 @@
 }
 html {
   font-family: "JetBrains Mono", san-serif;
-  background-image: url(./assets/bg.png);
+  background-image: url(../images/bg.jpg);
 }
 body {
   padding: 0px;
@@ -93,4 +93,8 @@ nav {
   font-size: 20px;
   text-decoration: none;
   color: #ece5d2;
+}
+
+body {
+   overflow: hidden;
 }
