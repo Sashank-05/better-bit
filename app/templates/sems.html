@@ -29,11 +29,12 @@
 </nav>
 <div id="centerwelcome">
     <div id="welcomebox">
-        <p id="wlcmbit">Welcome to BetterBIT</p>
-        <p id="selectcrs">Select your course</p>
+        <p id="wlcmbit">Welcome to Better BIT</p>
+        <p id="selectcrs">Select your Semester</p>
+        <p id="selectsms">(You can come back here after selecting)</p>
         <hr/>
-        {% for branch in branches %}
-        <a href="#" onclick="selectCourse('{{ branch[0] }}', '{{ branch[1] }}')">{{ branch[1] }}</a>
+        {% for sem in sems %}
+        <a href="#" onclick="">{{ sem }}</a>
         <hr/>
 
         {% endfor %}

@@ -1,0 +1,18 @@
+{
+  "branches": [
+    [
+      "CS",
+      "Computer Science"
+    ],
+    [
+      "CD",
+      "Data Science"
+    ]
+  ],
+  "CD" : [
+    "Physics Cycle",
+    "Chemistry Cycle",
+    "Semester 3: DS"
+
+  ]
+}
