@@ -1,33 +1,39 @@
 :root {
   /* Special */
-  --bg: #16181d;
-  --fg: #e3e3dd;
-  --cursor: #e3e3dd;
+  --bg: #21063a;
+  --fg: #c8bbf0;
+  --cursor: #c8bbf0;
+
   /* Colors */
-  --color0: #16181d;
-  --color1: #738e9c;
-  --color2: #9ea5a0;
-  --color3: #ccbba0;
-  --color4: #d6c5aa;
-  --color5: #e5cba8;
-  --color6: #a8c0c3;
-  --color7: #e3e3dd;
-  --color8: #9e9e9a;
-  --color9: #738e9c;
-  --color10: #9ea5a0;
-  --color11: #ccbba0;
-  --color12: #d6c5aa;
-  --color13: #e5cba8;
-  --color14: #a8c0c3;
-  --color15: #e3e3dd;
+  --color0: #21063a;
+  --color1: #6e48db;
+  --color2: #9d329b;
+  --color3: #9752a5;
+  --color4: #9d3cd6;
+  --color5: #9a5ddc;
+  --color6: #c667e3;
+  --color7: #c8bbf0;
+  --color8: #8c82a8;
+  --color9: #6e48db;
+  --color10: #9d329b;
+  --color11: #9752a5;
+  --color12: #9d3cd6;
+  --color13: #9a5ddc;
+  --color14: #c667e3;
+  --color15: #c8bbf0;
 }
 html {
   font-family: "JetBrains Mono", san-serif;
-  background-image: url(../images/bg.jpg);
+  background-image: url(./assets/stereo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 body {
   padding: 0px;
   margin: 15px;
+  height: 90%;
 }
 nav {
   background-color: var(--bg);
@@ -66,7 +72,7 @@ nav {
 }
 #centerwelcome {
   display: flex;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -92,9 +98,8 @@ nav {
   padding: 20px;
   font-size: 20px;
   text-decoration: none;
-  color: #ece5d2;
+  color: var(--fg);
 }
-
-body {
-   overflow: hidden;
+hr {
+  border-color: var(--fg);
 }
