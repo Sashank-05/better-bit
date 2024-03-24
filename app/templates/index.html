@@ -33,15 +33,16 @@
     <div id="centerwelcome">
       <div id="welcomebox">
         <p id="wlcmbit">Welcome to BetterBIT</p>
-        <p id="selectcrs">Select your course</p>
-        <hr />
-        {% for branch in branches %}
-        <a href="#" onclick="selectCourse('{{ branch[0] }}', '{{ branch[1] }}')"
-          >{{ branch[1] }}</a
-        >
-        <hr />
-
-        {% endfor %}
+        <p id="selectcrs">Select your stream</p>
+        <div id="streams">
+          {% for branch in branches %}
+          <a
+            href="#"
+            onclick="selectCourse('{{ branch[0] }}', '{{ branch[1] }}')"
+            >{{ branch[1] }}</a
+          >
+          {% endfor %}
+        </div>
       </div>
     </div>
   </body>

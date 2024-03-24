@@ -1,22 +1,15 @@
 {
   "branches": [
-    [
-      "CS",
-      "Computer Science"
-    ],
-    [
-      "CD",
-      "Data Science"
-    ]
+    ["CS", "Computer Science"],
+    ["CD", "Data Science"],
+    ["EC", "Electronics & Communication"],
+    ["EE", "Electronics & Electrical"],
+    ["IS", "Information Science"],
+    ["AI", "Artificial Intelligence"],
+    ["IC", "Cybersecurity & Blockchain"],
+    ["ME", "Mechanical Engineering"],
+    ["VL", "Very Large Scale Integration"]
   ],
-  "CD": [
-    "Physics Cycle",
-    "Chemistry Cycle",
-    "Semester 3: CS"
-  ],
-  "CS": [
-    "Physics Cycle",
-    "Chemistry Cycle",
-    "Semester 3: CS"
-  ]
+  "CD": ["Physics Cycle", "Chemistry Cycle", "Semester 3: CS"],
+  "CS": ["Physics Cycle", "Chemistry Cycle", "Semester 3: CS"]
 }

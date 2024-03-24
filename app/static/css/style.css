@@ -1,6 +1,7 @@
 :root {
   /* Special */
   --bg: #21063a;
+  --bgspcl: #0d0217;
   --fg: #c8bbf0;
   --cursor: #c8bbf0;
 
@@ -44,6 +45,7 @@ nav {
   border-style: solid;
   border-color: var(--color1);
   display: flex;
+  position: relative;
   justify-content: space-between;
 }
 #logo {
@@ -86,6 +88,7 @@ nav {
   opacity: 0.95;
   padding: 20px;
   width: 40%;
+  display: grid;
 }
 #welcomebox > p {
   font-size: 30px;
@@ -97,13 +100,20 @@ nav {
 #welcomebox > #selectsms {
   font-size: 18px;
 }
-
-#welcomebox > a {
+#streams {
+  height: 100%;
+}
+#welcomebox > #streams > a {
   display: block;
   padding: 20px;
   font-size: 20px;
   text-decoration: none;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  margin: 10px 0px;
   color: var(--fg);
+  background-color: var(--bgspcl);
 }
 hr {
   border-color: var(--fg);
@@ -115,3 +125,40 @@ hr {
   font-size: 25px;
 }
 
+@media (min-height: 800px) and (min-width: 360px) {
+  body {
+    margin: 10px;
+  }
+  #logo {
+    font-size: 15px;
+    padding: 3px 0px 0px 0px;
+  }
+  nav {
+    padding: 10px 5px 5px 15px;
+  }
+  #navbar {
+    width: 10%;
+  }
+  #welcomebox {
+    width: 100%;
+    height: 90%;
+  }
+  #welcomebox > #wlcmbit {
+    font-size: 20px;
+    margin: 10px 0px;
+  }
+  #welcomebox > #selectcrs {
+    font-size: 20px;
+    margin: 10px 0px;
+  }
+  #welcomebox > #streams > a {
+    font-size: 15px;
+    padding: 20px;
+  }
+  #streams {
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
