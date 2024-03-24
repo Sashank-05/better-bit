@@ -2,8 +2,12 @@
     "version": 2,
     "builds": [
         {
-            "src": "./app/__init__.py",
+            "src": "app/__init__.py",
             "use": "@vercel/python"
+        },
+        {
+            "src": "app/static/images/*.png",
+            "use": "@vercel/static"
         }
     ],
     "routes": [

@@ -9,10 +9,14 @@
       "Data Science"
     ]
   ],
-  "CD" : [
+  "CD": [
     "Physics Cycle",
     "Chemistry Cycle",
-    "Semester 3: DS"
-
+    "Semester 3: CS"
+  ],
+  "CS": [
+    "Physics Cycle",
+    "Chemistry Cycle",
+    "Semester 3: CS"
   ]
 }
