@@ -30,12 +30,14 @@
 </nav>
 <div id="centerwelcome">
     <div id="welcomebox">
-        <button id="goback" onclick="smoothChange('/')"><i class="fas fa-arrow-left"></i></button>
-        <p id="selectcrs">Select your Semester</p>
+
+        <p id="selectcrs"><a id="goback" onclick="smoothChange('/')"><i class="fas fa-arrow-left"
+                                                                        style="color: var(--fg); "></i></a>    Select your
+            Semester</p>
         <p id="selectsms">(You can come back here after selecting)</p>
         <hr/>
         {% for sem in sems %}
-        <a href="#" onclick="">{{ sem }}</a>
+        <a href="#" onclick="smoothChange(window.location.pathname+'/{{ sem }}')">{{ sem }}</a>
         <hr/>
 
         {% endfor %}

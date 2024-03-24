@@ -24,7 +24,7 @@
 }
 html {
   font-family: "JetBrains Mono", san-serif;
-  background-image: url(../images/stereo.png);
+  background-image: url(../images/stereo.bmp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -111,10 +111,7 @@ hr {
 
 #goback {
   background-color: var(--bg);
-  border-radius: 0px;
-  font-size: 30px;
+
+  font-size: 25px;
 }
 
-#goback:hover {
-  background-color: var(--color3);
-}
