@@ -1,4 +1,4 @@
-const bg = "#21063a";
+//const bg = "#21063a";
 const fg = "#c8bbf0";
 const bgspcl = "#0d0217";
 const cursor = "#c8bbf0";

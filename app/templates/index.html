@@ -1,52 +1,83 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title></title>
     <link
-      href="{{ url_for('static', filename='css/style.css') }}"
-      rel="stylesheet"
+            href="{{ url_for('static', filename='css/style.css') }}"
+            rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
     />
-  </head>
-  <body>
-    <nav>
-      <a href="#" id="logo">Better BIT</a>
-      <div id="navbar">
+    <script src="{{ url_for('static', filename='js/themes.js') }}"></script>
+</head>
+<body>
+
+<nav>
+    <a href="#" id="logo">Better BIT</a>
+    <div id="navbar">
         <div>
-          <a href="#">Contributors</a>
-          <a href="#">Contribute</a>
-          <a href="#">Login</a>
+            <a href="#">Contributors</a>
+            <a href="#">Contribute</a>
+            <a href="#">Login</a>
         </div>
-      </div>
-    </nav>
-    <div id="centerwelcome">
-      <div id="welcomebox">
+    </div>
+</nav>
+<div id="centerwelcome">
+    <div id="welcomebox">
         <p id="wlcmbit">Welcome to BetterBIT</p>
+
         <p id="selectcrs">Select your stream</p>
         <div id="streams">
-          {% for branch in branches %}
-          <a
-            href="#"
-            onclick="selectCourse('{{ branch[0] }}', '{{ branch[1] }}')"
-            >{{ branch[1] }}</a
-          >
-          {% endfor %}
+            {% for branch in branches %}
+                <a
+                        href="#"
+                        onclick="selectCourse('{{ branch[0] }}', '{{ branch[1] }}')"
+                >{{ branch[1] }}</a
+                >
+            {% endfor %}
         </div>
-      </div>
     </div>
-  </body>
 
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</div>
+
+<div class="palette-icon" id="paletteIcon">&#127912;</div>
+
+
+<div class="popup" id="popup">
+    {% for img in imgs %}
+        <img src="{{ url_for('static', filename='images/' + img) }}" height="100" alt="{{ img }}">
+
+        <p>{{ img }}</p>
+    {% endfor %}
+</div>
+
+<script>
+    const paletteIcon = document.getElementById('paletteIcon');
+    const popup = document.getElementById('popup');
+
+    function togglePopup() {
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+        }
+    }
+
+    paletteIcon.addEventListener('click', togglePopup);
+</script>
+</body>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
 </html>
