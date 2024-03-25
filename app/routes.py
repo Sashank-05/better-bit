@@ -1,5 +1,3 @@
-
-
 import json
 import os
 
@@ -38,8 +36,8 @@ def semesters(coursecode):
     return render_template('sems.html', sems=branches[coursecode])
 
 
-@app.route('/<coursecode>/<semcode>/<branchcode>')
-def subjects(coursecode, semcode, branchcode):
+@app.route('/<coursecode>/semesters/<semester>')
+def subjects(coursecode, semester):
     """
     Placeholder route for displaying subjects for a specific semester and branch.
     Not implemented.
@@ -49,13 +47,12 @@ def subjects(coursecode, semcode, branchcode):
 
     Args:
         coursecode (str): Code of the selected course
-        semcode (str): Code of the selected semester
-        branchcode (str): Code of the selected branch
+        semester (str): Name of the selected semester
 
     Returns:
-        str: Message indicating the route is not implemented
+        str:
     """
-    return "Not implemented", 503
+    return "Not implemented"
 
 
 @app.route("/login")
@@ -69,6 +66,8 @@ def login():
     """
     if request.method == 'POST':
         return "test"
+
+    return render_template('login.html')
 
 
 @app.route("/signup")

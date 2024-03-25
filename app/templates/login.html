@@ -1,12 +1,49 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LOGIN</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet"/>
+
+
 </head>
 <body>
-<form action="/login">
+<script src="{{ url_for('static', filename='js/themes.js') }}"></script>
+<nav>
 
-</form>
+    <a href="#" id="logo">BetterBIT</a>
+    <div id="navbar">
+        <div>
+            <a href="#">Contributors</a>
+            <a href="#">Contribute</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+</nav>
+<div class="login-box">
+    <h2>LOGIN</h2>
+    <hr/>
+    <div class="input-group">
+        <label for="username">USERNAME</label>
+        <input type="text" id="username" placeholder="ENTER YOUR USERNAME">
+    </div>
+    <div class="input-group">
+        <label for="password">PASSWORD</label>
+        <label>
+            <input class="password" type="text" placeholder="ENTER YOUR PASSWORD">
+        </label>
+    </div>
+    <div class="btngrp">
+        <button class="btn">REGISTER</button>
+        <button class="btn">FORGOT PASSWORD</button>
+    </div>
+</div>
 </body>
-</html>

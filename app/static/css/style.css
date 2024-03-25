@@ -98,6 +98,7 @@ nav {
     opacity: 0.95;
     padding: 20px;
     width: 40%;
+    height: 50%;
     display: grid;
 }
 
@@ -107,14 +108,16 @@ nav {
 
 #welcomebox > #selectcrs {
     font-size: 25px;
+
 }
 
 #welcomebox > #selectsms {
     font-size: 18px;
+
 }
 
 #streams {
-    height: 100%;
+    overflow-y: scroll;
 }
 
 #welcomebox > #streams > a {
@@ -128,6 +131,7 @@ nav {
     margin: 10px 0px;
     color: var(--fg);
     background-color: var(--bgspcl);
+
 }
 
 hr {
@@ -167,48 +171,39 @@ hr {
 }
 
 @media (min-height: 800px) and (min-width: 360px) {
-    body {
-        margin: 10px;
-    }
-
-    #logo {
-        font-size: 15px;
-        padding: 3px 0px 0px 0px;
-    }
-
-    nav {
-        padding: 10px 5px 5px 15px;
-    }
-
-    #navbar {
-        width: 10%;
-    }
-
-    #welcomebox {
-        width: 100%;
-        height: 90%;
-    }
-
-    #welcomebox > #wlcmbit {
-        font-size: 20px;
-        margin: 10px 0px;
-    }
-
-    #welcomebox > #selectcrs {
-        font-size: 20px;
-        margin: 10px 0px;
-    }
-
-    #welcomebox > #streams > a {
-        font-size: 15px;
-        padding: 20px;
-    }
-
-    #streams {
-        overflow: hidden;
-        overflow-y: scroll;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
-
+  body {
+    margin: 10px;
+  }
+  #logo {
+    font-size: 15px;
+    padding: 3px 0px 0px 0px;
+  }
+  nav {
+    padding: 10px 5px 5px 15px;
+  }
+  #navbar {
+    width: 10%;
+  }
+  #welcomebox {
+    width: 100%;
+    height: 90%;
+  }
+  #welcomebox > #wlcmbit {
+    font-size: 20px;
+    margin: 10px 0px;
+  }
+  #welcomebox > #selectcrs {
+    font-size: 20px;
+    margin: 10px 0px;
+  }
+  #welcomebox > #streams > a {
+    font-size: 15px;
+    padding: 20px;
+  }
+  #streams {
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
