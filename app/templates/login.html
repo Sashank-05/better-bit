@@ -18,32 +18,34 @@
 <body>
 <script src="{{ url_for('static', filename='js/themes.js') }}"></script>
 <nav>
-
     <a href="#" id="logo">BetterBIT</a>
     <div id="navbar">
-        <div>
-            <a href="#">Contributors</a>
-            <a href="#">Contribute</a>
-            <a href="#">Login</a>
-        </div>
+      <div>
+        <a href="#">Contributors</a>
+        <a href="#">Contribute</a>
+        <a href="#">Login</a>
+      </div>
     </div>
-</nav>
-<div class="login-box">
-    <h2>LOGIN</h2>
-    <hr/>
-    <div class="input-group">
-        <label for="username">USERNAME</label>
-        <input type="text" id="username" placeholder="ENTER YOUR USERNAME">
-    </div>
-    <div class="input-group">
-        <label for="password">PASSWORD</label>
-        <label>
-            <input class="password" type="text" placeholder="ENTER YOUR PASSWORD">
-        </label>
-    </div>
-    <div class="btngrp">
-        <button class="btn">REGISTER</button>
-        <button class="btn">FORGOT PASSWORD</button>
+  </nav>
+  <div id="sign_box">
+        
+    <div class="sign_in " >
+        <h2 id="login" >Login</h2>
+        
+         <label class="username">
+            <input type="text" required/>
+            <span class="placeholder">Username</span>
+         </label>
+         
+         <label class="password">
+            <input type="text" required/>
+            <span class="placeholder">Password</span>
+         </label>     
+    
+    <div id ="btn_grp">
+        <button class ="btn_1">Register</button>
+        <button class ="btn_1">Forgot Password</button>
+         </div>
     </div>
 </div>
-</body>
+
