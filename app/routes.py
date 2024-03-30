@@ -97,3 +97,8 @@ def admin_panel():
         # return render_template('admin.html', result=result)
 
     return render_template('admin.html', result=None)
+
+
+@app.route("/navbar")
+def navbar():
+    return render_template("navbar.html")
