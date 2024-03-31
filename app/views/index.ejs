@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title></title>
+    <title>Select Course</title>
     <link href="/css/style.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -12,13 +12,14 @@
     <script src="/js/themes.js"></script>
 </head>
 <body>
+    <header>
 <nav>
     <a href="#" id="logo">Better BIT</a>
     <div id="navbar">
         <div>
-            <a href="#">Contributors</a>
+            <a href="/">Contributors</a>
             <a href="#">Contribute</a>
-            <a href="#">Login</a>
+            <a href="/login">Login</a>
         </div>
         <div></div>
         <a href="#" onclick="showSidebar()">
@@ -28,6 +29,7 @@
         </a>
     </div>
 </nav>
+</header>
 <div id="centerwelcome">
     <div id="welcomebox">
         <p id="wlcmbit">Welcome to BetterBIT</p>
@@ -44,9 +46,13 @@
 <div class="palette-icon" id="paletteIcon">&#127912;</div>
 
 <div class="popup" id="popup">
+    <div class="color-container bg-color"></div>
+    <div class="color-container fg-color"></div>
+    <div class="color-container bgspcl-color"></div>
     <% imgs.forEach(function(img) { %>
-    <img src="/images/<%= img %>" height="100" alt="<%= img %>"/>
-    <p><%= img %></p>
+    <div class="img-container">
+        <img src="/images/<%= img %>" alt="<%= img %>"/>
+    </div>
     <% }) %>
 </div>
 
@@ -60,14 +66,14 @@
 </div>
 
 <script>
-    const paletteIcon = document.getElementById("paletteIcon");
-    const popup = document.getElementById("popup");
+    paletteIcon = document.getElementById("paletteIcon");
+    popup = document.getElementById("popup");
 
     function togglePopup() {
-        if (popup.style.display === "block") {
+        if (popup.style.display === "flex") {
             popup.style.display = "none";
         } else {
-            popup.style.display = "block";
+            popup.style.display = "flex";
         }
     }
 
