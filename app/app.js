@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 
 const app = express();
-const PORT = 80;
+const PORT = 8080;
 
 // Load branches and images data
 const branches = JSON.parse(fs.readFileSync('db/branches.json', 'utf8'));
