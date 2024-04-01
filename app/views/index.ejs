@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Select Course</title>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"/>
+    <script src="/js/themes.js"></script>
+</head>
+<body>
+    <header>
+<nav>
+    <a href="#" id="logo">Better BIT</a>
+    <div id="navbar">
+        <div>
+            <a href="/">Contributors</a>
+            <a href="#">Contribute</a>
+            <a href="/login">Login</a>
+        </div>
+        <div></div>
+        <a href="#" onclick="showSidebar()">
+            <span class="material-icons" id="menu" onclick="showSidebar()">
+                menu
+            </span>
+        </a>
+    </div>
+</nav>
+</header>
+<div id="centerwelcome">
+    <div id="welcomebox">
+        <p id="wlcmbit">Welcome to BetterBIT</p>
+
+        <p id="selectcrs">Select your stream</p>
+        <div id="streams">
+            <% branches.forEach(function(branch) { %>
+            <a href="#" onclick="selectCourse('<%= branch[0] %>', '<%= branch[1] %>')"><%= branch[1] %></a>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<div class="palette-icon" id="paletteIcon">&#127912;</div>
+
+<div class="popup" id="popup">
+    <div class="color-container bg-color"></div>
+    <div class="color-container fg-color"></div>
+    <div class="color-container bgspcl-color"></div>
+    <% imgs.forEach(function(img) { %>
+    <div class="img-container">
+        <img src="/images/<%= img %>" alt="<%= img %>"/>
+    </div>
+    <% }) %>
+</div>
+
+<div id="sidebar">
+    <a href="#" id="back" onclick="hideSidebar()">
+        <span class="material-icons" style="height: 10px">arrow_forward_ios</span>
+    </a>
+    <a href="#">Contributors</a>
+    <a href="#">Contribute</a>
+    <a href="#">Login</a>
+</div>
+
+<script>
+    paletteIcon = document.getElementById("paletteIcon");
+    popup = document.getElementById("popup");
+
+    function togglePopup() {
+        if (popup.style.display === "flex") {
+            popup.style.display = "none";
+        } else {
+            popup.style.display = "flex";
+        }
+    }
+
+    paletteIcon.addEventListener("click", togglePopup);
+</script>
+
+<script src="/js/app.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>

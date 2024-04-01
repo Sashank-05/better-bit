@@ -50,3 +50,18 @@ function smoothChange(url) {
     };
     nxtpgReq.send();
 }
+
+function loadnavbar() {
+    console.info("fetching navbar")
+    var navbarcontent = new XMLHttpRequest();
+    navbarcontent.open("GET", "/navbar", true);
+    navbarcontent.onreadystatechange = function () {
+
+        console.log("Got the nav bar!")
+        document.getElementById("nav").innerHTML = navbarcontent.responseText
+
+
+    };
+    navbarcontent.send();
+}
+

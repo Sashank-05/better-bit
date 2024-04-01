@@ -161,15 +161,51 @@ hr {
 
 .popup {
   display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 500px; /* Adjust as needed */
+  max-height: 300px; /* Adjust as needed */
+  overflow: auto;
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: var(--fg);
+  background-color: var(--fg); /* Using var(--fg) */
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.img-container {
+  width: calc(33.33% - 10px); /* Adjust according to your grid */
+  position: relative;
+  height: 100px;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-container p {
+  display: none;
+}
+
+.img-container:hover p,
+.img-container.clicked p {
+  display: block;
+}
+
+.popup img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.popup img.clicked {
+  opacity: 1;
+}
+
 
 @media (max-width: 413px) {
   body {

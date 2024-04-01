@@ -93,7 +93,7 @@ nav {
       top:30px;
       transform:translate(-50%);
       font-size: 18px;
-      color:var(--color11);
+      color:var(--bg);
       transition: -
       top 0.3s ease,
       font-size 0.3s ease,
@@ -133,8 +133,8 @@ nav {
     padding:10px;
     height:max-content;
     width:max-content;
-    color: var(--color11);
-    background-color:var(--color15);
+    color: var(--bg);
+    background-color:var(--fg);
     border-width: 2px;
     border-color: var(--color1);
     border-radius: 15px;
@@ -142,7 +142,7 @@ nav {
   
   
     .btn_1:hover {
-      background-color:var(--color12);
+      background-color:var(--color4);
       color: white;
   }
   .btn:active{
