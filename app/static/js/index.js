@@ -2,9 +2,37 @@ function selectCourse(courseCode, courseName) {
     localStorage.setItem("selectedCourseCode", courseCode);
     localStorage.setItem("selectedCourseName", courseName);
 
-    var nxtPg = "/" + courseCode + "/semesters";
-    smoothChange(nxtPg);
+    var Pg = "/" + courseCode + "/semesters";
+    var sems = new XMLHttpRequest();
+    sems.open("GET", Pg, true);
+    sems.onreadystatechange = function() {
+        if (sems.readyState === 4 && sems.status === 200) {
+            var heading = document.getElementById("wlcmbit");
+            var selectCourse = document.getElementById("selectcrs");
+            selectCourse.innerHTML = courseName +"Semesters";
+            heading.innerHTML = "<a id=\"goback\" onclick=\"smoothChange('/')\"> <i class=\"fas fa-arrow-left\" style=\"color: var(--fg); cursor: pointer;\"></i> <p>Select your semester</p>";
+
+            var branches = JSON.parse(sems.responseText); 
+            var branchesContent = "";
+            branches.forEach(element => {
+                branchesContent += "<a href='#' onclick='smoothChange(\""+courseCode + "/" + element + "\")'>" + element + "</a>";
+            });
+            var streams = document.getElementById("streams");
+            streams.innerHTML = branchesContent;
+        }
+    };
+    sems.send();
+    console.info("worked!");
 }
+
+
+/*
+<div id="streams">
+            <% branches.forEach(function(branch) { %>
+            <a href="#" onclick="selectCourse('<%= branch[0] %>', '<%= branch[1] %>')"><%= branch[1] %></a>
+            <% }) %>
+        </div>
+*/
 
 function updatePageContent(content) {
     var scripts = document.getElementsByTagName('script');
