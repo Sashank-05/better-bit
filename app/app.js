@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/:coursecode/semesters', (req, res) => {
     const { coursecode } = req.params;
-    res.render('sems', { sems: branches[coursecode] });
+    return res.json(branches[coursecode]);
 });
 
 app.get('/:coursecode/semesters/:semester', (req, res) => {
