@@ -40,11 +40,19 @@
 
       <p id="selectcrs">Select your stream</p>
       <div id="streams">
-        <% branches.forEach(function(branch) { %>
-          <a href="#" onclick="selectCourse('<%= branch[0] %>', '<%= branch[1] %>')">
-            <%= branch.name %>
-          </a>
+          <% if (parameter === "branches") { %>
+            <% boxes.forEach((branch) => { %>
+              <a href="/<%= branch.code %>"> <%= branch.name %> </a>
+            <% }) %>
+          <% } else if (parameter === "semesters") {%>
+            <% boxes.semesters.forEach((semester) => {%>
+              <a href="/<%= boxes.code%>/<%= semester.number%>"> <%= semester.name %> </a>
+            <% }) %>
+          <% } else if (parameter === "subjects") {%>
+            <% boxes.forEach((subject) => {%>
+              <a href="/<%= branch %>/<%=semNo%>/<%=subject.code%>"> <%= subject.name %> </a>
           <% }) %>
+          <% } %>
       </div>
     </div>
   </div>
@@ -59,7 +67,7 @@
       <div class="img-container">
         <img src="/images/<%= img %>" alt="<%= img %>" />
       </div>
-      <% }) %>
+    <% }) %>
   </div>
 
   <div id="sidebar">
