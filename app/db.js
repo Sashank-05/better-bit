@@ -1,36 +1,10 @@
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/betterbitDB");
 
-const noteSchema = {
-  noteTitle: String,
-  noteUrl: String,
-}
-const Note = mongoose.model("Note", noteSchema);
-const moduleSchema = {
-  name: String,
-  number: Number,
-  notes: [noteSchema], //Array of notes
-}
-const Module = mongoose.model("Module", moduleSchema);
-
-const subjectSchema = {
-  code: String,
-  name: String,
-  modules: [moduleSchema], //Array of modules
-}
-const Subject = mongoose.model("Subject", subjectSchema);
-
-const semesterSchema = {
-  name: String,
-  number: Number,
-  subjects: [subjectSchema]
-}
-const Semester = mongoose.model("Semester", semesterSchema);
-
 const branchSchema = {
   name: String,
   code: String,
-  semesters: [semesterSchema]
+  semesters: Object,
 }
 const Branch = mongoose.model("Branch", branchSchema);
 
@@ -140,6 +114,23 @@ const branches = [
   }
 ]
 
+async function findBranch(coursecode) {
+  const branches = await Branch.find();
+  return branches.find((branch) => branch.code === coursecode);
+}
+
+async function findSemester(coursecode, sem) {
+  const branch = await findBranch(coursecode);
+  const semester = branch.semesters.find(semester => semester.number === sem);
+  return semester;
+}
+
+async function findSubject(coursecode, sem, sub) {
+  const semester = await findSemester(coursecode, sem);
+  const subject = semester.subjects.find(subject => subject.code === sub);
+  return subject;
+}
+
 // Checking if branches or semesters exist in local database before adding them
 mongoose.connection.listCollections() //Shows collections in a database
   .then((result) => {
@@ -150,14 +141,9 @@ mongoose.connection.listCollections() //Shows collections in a database
       Branch.insertMany(branches)
         .then(function() {
           console.log("Branches collection inserted"); // Success
-
-          Branch.find()
-            .then((result) => { console.log("Created Branch Collection ->", result) });
         })
 
     } else {
-      Branch.find()
-        .then((result) => { console.log("Existing Branch Collection ->", result) });
       console.log("Branches collection exists");
     }
   });
@@ -165,4 +151,7 @@ mongoose.connection.listCollections() //Shows collections in a database
 module.exports = {
   connection: mongoose.connection,
   Branch,
+  findSemester,
+  findBranch,
+  findSubject,
 }
