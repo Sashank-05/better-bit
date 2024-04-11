@@ -46,11 +46,15 @@
             <% }) %>
           <% } else if (parameter === "semesters") {%>
             <% boxes.semesters.forEach((semester) => {%>
-              <a href="/<%= boxes.code%>/<%= semester.number%>"> <%= semester.name %> </a>
+              <a href="/<%=url%>/<%= semester.number %>"> <%= semester.name %> </a>
             <% }) %>
           <% } else if (parameter === "subjects") {%>
-            <% boxes.forEach((subject) => {%>
-              <a href="/<%= branch %>/<%=semNo%>/<%=subject.code%>"> <%= subject.name %> </a>
+            <% boxes.subjects.forEach((subject) => {%>
+              <a href="/<%=url%>/<%= subject.code %>"> <%= subject.name %> </a>
+            <% }) %>
+          <% }else if (parameter === "modules") {%>
+            <% boxes.modules.forEach((module) => {%>
+              <a href="/<%= url %>/<%= module.number %>"> <%= module.name %> </a>
           <% }) %>
           <% } %>
       </div>
