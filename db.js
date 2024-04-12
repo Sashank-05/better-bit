@@ -157,10 +157,12 @@ mongoose.connection.listCollections().then((result) => {
 });
 
 
-export default {
-  connection: mongoose.connection,
-  Branch,
+const connection = mongoose.connection;
+
+export {
+  connection,
+  branches as Branch,
   findSemester,
   findBranch,
-  findSubject,
+  findSubject
 };
