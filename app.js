@@ -16,14 +16,16 @@ const generatePath = (params) => {
   return `${pathParams}`;
 };
 
-console.log(connection);
-connection.once("open", () => {
 
+
+connection.once("open", () => {
+  console.log(Branch);
   console.log("Connected to mongodb via db.js");
 
   //Rendering all the branches in homepage
   app.get('/', (req, res) => {
     // returns entire db of branches
+    console.log(Branch);
     Branch.find()
       .then((branches) => {
         res.render('index', { parameter: "branches", boxes: branches, imgs: imgs }); //boxes = thing to be dynamically rendered

@@ -161,7 +161,7 @@ const connection = mongoose.connection;
 
 export {
   connection,
-  branches as Branch,
+  Branch,
   findSemester,
   findBranch,
   findSubject
