@@ -1,5 +1,6 @@
-const express = require('express');
-const fs = require('fs');
+import express from 'express';
+import fs from 'fs';
+import { connection, Branch, findBranch, findSemester, findSubject } from './db.js';
 
 const app = express();
 const PORT = 8080;
@@ -7,16 +8,15 @@ const PORT = 8080;
 app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
-const imgs = fs.readdirSync("static/images")
-
-const { connection, Branch, findBranch, findSemester, findSubject } = require('./db.js');
+const imgs = fs.readdirSync("static/images");
 
 //function to generate path of links
-function generatePath(params) {
+const generatePath = (params) => {
   const pathParams = Object.values(params).join('/');
   return `${pathParams}`;
-}
+};
 
+console.log(connection);
 connection.once("open", () => {
 
   console.log("Connected to mongodb via db.js");
@@ -37,30 +37,35 @@ connection.once("open", () => {
     findBranch(coursecode)
       .then(branch => {
         res.render('index', { url: generatePath(req.params), parameter: "semesters", boxes: branch, imgs: imgs });
-      })
+      });
   });
 
+  app.post("/:coursecode",(req,res)=>{
+    const { coursecode } = req.params;
+    findBranch(coursecode)
+    .then(branch=>{
+      res.json({url: generatePath(req.params), boxes: branch});
+    });
+  });
+  
   //Rendering all the subjects in the semester
   app.get('/:coursecode/:sem', (req, res) => {
-    const { coursecode } = req.params;
-    const { sem } = req.params;
+    const { coursecode, sem } = req.params;
     // returns only the semester specified of coursecode ex: CD/2 returns 2nd sem of CD which has a subjects list
     findSemester(coursecode, Number(sem))
       .then((semester) => {
         res.render('index', { url: generatePath(req.params), parameter: "subjects", boxes: semester, imgs: imgs });
-      })
+      });
   });
 
   //Rendering all the modules in the subject
   app.get('/:coursecode/:sem/:sub', (req, res) => {
-    const { coursecode } = req.params;
-    const { sem } = req.params;
-    const { sub } = req.params;
+    const { coursecode, sem, sub } = req.params;
     //returns the modules of the path specified ex: CD/2/BMATS201/ returns all the modules within the subject
     findSubject(coursecode, Number(sem), sub)
       .then((subject) => {
         res.render('index', { url: generatePath(req.params), parameter: "modules", boxes: subject, imgs: imgs });
-      })
+      });
   });
 
   app.get('/login', (req, res) => {
@@ -79,4 +84,4 @@ connection.once("open", () => {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
-})
+});

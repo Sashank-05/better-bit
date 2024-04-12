@@ -1,15 +1,23 @@
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/betterbitDB");
+import mongoose from "mongoose";
 
+async function connectToMongoDB() {
+  try {
+    await mongoose.connect("mongodb+srv://sashankvanka:Ss123123@cluster0.s3vidts.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    console.log("MongoDB connected successfully");
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error);
+  }
+}
+
+connectToMongoDB()
 const branchSchema = {
   name: String,
   code: String,
   semesters: Object,
-}
+};
+
 const Branch = mongoose.model("Branch", branchSchema);
 
-//Temperory offline mongodb database
-//Will be directly uploaded in Atlas when deployment time
 const branches = [
   {
     code: "CD",
@@ -114,44 +122,45 @@ const branches = [
   }
 ]
 
-async function findBranch(coursecode) {
+const findBranch = async (coursecode) => {
   const branches = await Branch.find();
   return branches.find((branch) => branch.code === coursecode);
-}
+};
 
-async function findSemester(coursecode, sem) {
+const findSemester = async (coursecode, sem) => {
   const branch = await findBranch(coursecode);
-  const semester = branch.semesters.find(semester => semester.number === sem);
+  const semester = branch.semesters.find((semester) => semester.number === sem);
   return semester;
-}
+};
 
-async function findSubject(coursecode, sem, sub) {
+const findSubject = async (coursecode, sem, sub) => {
   const semester = await findSemester(coursecode, sem);
-  const subject = semester.subjects.find(subject => subject.code === sub);
+  const subject = semester.subjects.find((subject) => subject.code === sub);
   return subject;
-}
+};
 
-// Checking if branches or semesters exist in local database before adding them
-mongoose.connection.listCollections() //Shows collections in a database
-  .then((result) => {
+mongoose.connection.listCollections().then((result) => {
+  const doesBranchesExist = result.some((collection) => collection.name === "branches");
 
-    doesBranchesExist = result.some((collection) => collection.name == "branches");
+  if (!doesBranchesExist) {
+    Branch.insertMany(branches)
+      .then(() => {
+        console.log("Branches collection inserted");
+      })
+      .catch((error) => {
+        console.error("Error inserting branches collection:", error);
+      });
+  } else {
+    console.log("Branches collection exists");
+  }
+  
+});
 
-    if (!doesBranchesExist) {
-      Branch.insertMany(branches)
-        .then(function() {
-          console.log("Branches collection inserted"); // Success
-        })
 
-    } else {
-      console.log("Branches collection exists");
-    }
-  });
-
-module.exports = {
+export default {
   connection: mongoose.connection,
   Branch,
   findSemester,
   findBranch,
   findSubject,
-}
+};

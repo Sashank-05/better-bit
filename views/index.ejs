@@ -12,6 +12,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet" />
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+
   <script src="/js/themes.js"></script>
 </head>
 
@@ -42,11 +47,11 @@
       <div id="streams">
           <% if (parameter === "branches") { %>
             <% boxes.forEach((branch) => { %>
-              <a href="/<%= branch.code %>"> <%= branch.name %> </a>
+              <a onclick="fetchSems('<%= branch.code %>',)"> <%= branch.name %> </a>
             <% }) %>
           <% } else if (parameter === "semesters") {%>
             <% boxes.semesters.forEach((semester) => {%>
-              <a href="/<%=url%>/<%= semester.number %>"> <%= semester.name %> </a>
+              <a onclick="fetchSubs('<%= semester.number %>')"> <%= semester.name %> </a>
             <% }) %>
           <% } else if (parameter === "subjects") {%>
             <% boxes.subjects.forEach((subject) => {%>
