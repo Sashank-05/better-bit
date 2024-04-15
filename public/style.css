@@ -1,0 +1,59 @@
+:root {
+  /* Special */
+  --bg: #21063a;
+  --bgspcl: #0d0217;
+  --fg: #c8bbf0;
+  --cursor: #c8bbf0;
+
+  /* Colors */
+  --color0: #21063a;
+  --color1: #6e48db;
+  --color2: #9d329b;
+  --color3: #9752a5;
+  --color4: #9d3cd6;
+  --color5: #9a5ddc;
+  --color6: #c667e3;
+  --color7: #c8bbf0;
+  --color8: #8c82a8;
+  --color9: #6e48db;
+  --color10: #9d329b;
+  --color11: #9752a5;
+  --color12: #9d3cd6;
+  --color13: #9a5ddc;
+  --color14: #c667e3;
+  --color15: #c8bbf0;
+  --bg-image: url("./images/stereo.bmp");
+}
+
+html {
+  font-family: "JetBrains Mono", sans-serif;
+  color: var(--fg);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  border-radius: 30px;
+  opacity: 0.95;
+}
+
+.navbar--logo {
+  font-weight: bold;
+  margin: 0px 30px;
+}
+
+.navbar--options {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar--options>li {
+  margin: 0px 50px;
+}
