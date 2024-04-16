@@ -1,0 +1,41 @@
+.mainWindow {
+  background-color: var(--bg);
+  padding: 20px 40px;
+  border-radius: 30px;
+  opacity: 0.95;
+}
+
+.centerwelcome {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomebox {
+  background-color: var(--bg);
+  border-radius: 30px;
+  border-style: solid;
+  border-color: var(--color1);
+  color: var(--fg);
+  font-weight: bold;
+  opacity: 0.95;
+  padding: 20px;
+  width: 40%;
+}
+
+.welcomebox>p {
+  font-size: 30px;
+}
+
+.welcomebox>#selectcrs {
+  font-size: 25px;
+}
+
+.welcomebox>a {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ece5d2;
+}

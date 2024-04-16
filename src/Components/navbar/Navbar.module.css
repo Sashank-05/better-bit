@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  border-radius: 30px;
+  opacity: 0.95;
+}
+
+.navbarlogo {
+  font-weight: bold;
+  margin: 0px 30px;
+}
+
+.navbaroptions {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbaroptions>li {
+  margin: 0px 50px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fg);
+}

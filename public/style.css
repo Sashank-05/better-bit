@@ -32,28 +32,5 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100%;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--bg);
-  border-radius: 30px;
-  opacity: 0.95;
-}
-
-.navbar--logo {
-  font-weight: bold;
-  margin: 0px 30px;
-}
-
-.navbar--options {
-  list-style-type: none;
-  display: flex;
-}
-
-.navbar--options>li {
-  margin: 0px 50px;
+  height: 100vh;
 }
