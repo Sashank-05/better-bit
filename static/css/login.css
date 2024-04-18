@@ -18,134 +18,133 @@ nav {
     justify-content: space-between;
     z-index: 100;
     min-width: 300px;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     display: inline-flex;
     width: 50%;
     align-items: center;
     border-radius: 30px;
-  }
-  .navbar > div {
+}
+
+.navbar > div {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     z-index: 2;
-  }
-  .navbar > div > a {
+}
+
+.navbar > div > a {
     color: var(--fg);
     font-weight: bold;
     text-decoration: none;
-  }
-     
-    #sign_box {
-      margin-top: 10%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      height: 90%;
-      justify-content: center;
-      align-items: center;
-    }
-    
-  
-    .sign_in{
-      
-      height: 500px;
-      margin: 55px;
-      display: flex;
-      flex-direction: column;
-      padding:20px;
-      background-color:var(--bg);
-      border: var(--color1);
-      color: var(--fg);
-      border-style: solid;
-      border-radius: 30px;
-      align-items: center;
-      height: max-content;
-      width:fit-content; 
-      opacity: 0.95;
-    }
-   
-   
-  
-   .username{
-      position: relative;
-      font-size: 14px;
-      padding-top: 20px;
-      margin-bottom: 5px;
-    }
-  
-     input{
-      border: none;
-      appearance: none;
-      background:var(--color15);
-      padding:10px;
-      border-radius: 15px;
-      width:250px;
-      outline:none;
-      font-size: 16px;
-    }
-    
-    .placeholder{
-      position: absolute;
-      left:60px;
-      top:30px;
-      transform:translate(-50%);
-      font-size: 18px;
-      color:var(--bg);
-      transition: -
-      top 0.3s ease,
-      font-size 0.3s ease,
-      color 0.3s ease;
-    }
-  input:valid + .placeholder,
-  input:focus+ .placeholder{
-      top:1px;
-      left:50px;
-      font-size:14px;
-      color:var(--color16);
-   }
-  
-  
-   
-   
-    .password{
-      position:relative;
-      font-size: 14px;
-      padding-top: 20px; 
-      margin-bottom: 5px;
-    }
-    
-  #btn_grp{
+}
+
+#sign_box {
+    margin-top: 10%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sign_in {
+
+    height: 500px;
+    margin: 55px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--bg);
+    border: var(--color1);
+    color: var(--fg);
+    border-style: solid;
+    border-radius: 30px;
+    align-items: center;
+    height: max-content;
+    width: fit-content;
+    opacity: 0.95;
+}
+
+
+.username {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+input {
+    border: none;
+    appearance: none;
+    background: var(--color15);
+    padding: 10px;
+    border-radius: 15px;
+    width: 250px;
+    outline: none;
+    font-size: 16px;
+}
+
+.placeholder {
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    transform: translate(-50%);
+    font-size: 18px;
+    color: var(--bg);
+    transition: -top 0.3s ease,
+    font-size 0.3s ease,
+    color 0.3s ease;
+}
+
+input:valid + .placeholder,
+input:focus + .placeholder {
+    top: 1px;
+    left: 50px;
+    font-size: 14px;
+    color: var(--color14);
+}
+
+
+.password {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+#btn_grp {
     width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    
-    
-  }
-  
-  
-  
-  .btn_1{
-    padding:10px;
-    height:max-content;
-    width:max-content;
+
+
+}
+
+
+.btn_1 {
+    padding: 10px;
+    height: max-content;
+    width: max-content;
     color: var(--bg);
-    background-color:var(--fg);
+    background-color: var(--fg);
     border-width: 2px;
     border-color: var(--color1);
     border-radius: 15px;
-  }
-  
-  
-    .btn_1:hover {
-      background-color:var(--color4);
-      color: white;
-  }
-  .btn:active{
-     opacity: 0.7;
-  }
+}
+
+
+.btn_1:hover {
+    background-color: var(--color4);
+    color: white;
+}
+
+.btn:active {
+    opacity: 0.7;
+}
   

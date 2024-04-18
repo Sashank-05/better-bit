@@ -6,17 +6,17 @@ function fetchSems(CourseCode, CourseName) {
     $.ajax({
         url: url,
         method: "POST",
-        success: function(data) {
+        success: function (data) {
             history.pushState(null, null, url);
             $("selectcrs").text("Select Your Semester");
             $('#streams').empty();
 
-            data.boxes.semesters.forEach(function(semester) {
+            data.boxes.semesters.forEach(function (semester) {
                 var semesterLink = $('<a>').attr('href', url + '/' + semester.number).text(semester.name);
                 $('#streams').append(semesterLink);
             });
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error("Error:", error);
         }
     });

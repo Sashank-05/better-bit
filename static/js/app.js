@@ -1,6 +1,7 @@
 function showSidebar() {
-  document.querySelector("#sidebar").style.display = "flex";
+    document.querySelector("#sidebar").style.display = "flex";
 }
+
 function hideSidebar() {
-  document.querySelector("#sidebar").style.display = "none";
+    document.querySelector("#sidebar").style.display = "none";
 }

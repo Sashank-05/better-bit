@@ -1,829 +1,933 @@
 :root {
-  /* Special */
-  --bg: #21063a;
-  --bgspcl: #0d0217;
-  --fg: #c8bbf0;
-  --cursor: #c8bbf0;
+    /* Special */
+    --bg: #21063a;
+    --bgspcl: #0d0217;
+    --fg: #c8bbf0;
+    --cursor: #c8bbf0;
 
-  /* Colors */
-  --color0: #21063a;
-  --color1: #6e48db;
-  --color2: #9d329b;
-  --color3: #9752a5;
-  --color4: #9d3cd6;
-  --color5: #9a5ddc;
-  --color6: #c667e3;
-  --color7: #c8bbf0;
-  --color8: #8c82a8;
-  --color9: #6e48db;
-  --color10: #9d329b;
-  --color11: #9752a5;
-  --color12: #9d3cd6;
-  --color13: #9a5ddc;
-  --color14: #c667e3;
-  --color15: #c8bbf0;
-  --bg-image: url("../images/stereo.bmp");
+    /* Colors */
+    --color0: #21063a;
+    --color1: #6e48db;
+    --color2: #9d329b;
+    --color3: #9752a5;
+    --color4: #9d3cd6;
+    --color5: #9a5ddc;
+    --color6: #c667e3;
+    --color7: #c8bbf0;
+    --color8: #8c82a8;
+    --color9: #6e48db;
+    --color10: #9d329b;
+    --color11: #9752a5;
+    --color12: #9d3cd6;
+    --color13: #9a5ddc;
+    --color14: #c667e3;
+    --color15: #c8bbf0;
+    --bg-image: url("../images/stereo.bmp");
 }
 
 html {
-  font-family: "JetBrains Mono", sans-serif;
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
+    font-family: "JetBrains Mono", sans-serif;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
 }
 
 body {
-  padding: 0px;
-  margin: 15px;
-  height: 90%;
+    padding: 0px;
+    margin: 15px;
+    height: 90%;
 }
+
 #sidebar {
-  display: none;
+    display: none;
 }
+
 nav {
-  background-color: var(--bg);
-  padding: 10px 10px 10px 25px;
-  border-radius: 30px;
-  opacity: 0.95;
-  backdrop-filter: blur(80px);
-  border-style: solid;
-  border-color: var(--color1);
-  display: flex;
-  justify-content: space-between;
+    background-color: var(--bg);
+    padding: 10px 10px 10px 25px;
+    border-radius: 30px;
+    opacity: 0.95;
+    backdrop-filter: blur(80px);
+    border-style: solid;
+    border-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
 }
 
 #logo {
-  display: inline-block;
-  color: var(--fg);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 20px;
+    display: inline-block;
+    color: var(--fg);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 #navbar {
-  display: inline-flex;
-  width: 50%;
-  align-items: center;
-  border-radius: 30px;
+    display: inline-flex;
+    width: 50%;
+    align-items: center;
+    border-radius: 30px;
 }
+
 #navbar > menu {
-  display: none;
+    display: none;
 }
+
 #navbar > div {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
 }
 
 #navbar > div > a {
-  color: var(--fg);
-  font-weight: bold;
-  text-decoration: none;
+    color: var(--fg);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #centerwelcome {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 #welcomebox {
-  background-color: var(--bg);
-  border-radius: 30px;
-  border-style: solid;
-  border-color: var(--color1);
-  color: var(--fg);
-  font-weight: bold;
-  opacity: 0.95;
-  padding: 20px;
-  width: 40%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
+    background-color: var(--bg);
+    border-radius: 30px;
+    border-style: solid;
+    border-color: var(--color1);
+    color: var(--fg);
+    font-weight: bold;
+    opacity: 0.95;
+    padding: 20px;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 #welcomebox > p {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 #welcomebox > #selectcrs {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 #welcomebox > #selectsms {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 #streams {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 #welcomebox > #streams > a {
-  display: block;
-  padding: 20px;
-  font-size: 20px;
-  text-decoration: none;
-  border-radius: 20px;
-  border-width: 3px;
-  border-style: solid;
-  margin: 10px 0px;
-  color: var(--fg);
-  background-color: var(--bgspcl);
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    margin: 10px 0px;
+    color: var(--fg);
+    background-color: var(--bgspcl);
 }
 
 hr {
-  border-color: var(--fg);
+    border-color: var(--fg);
 }
 
 #goback {
-  background-color: var(--bg);
+    background-color: var(--bg);
 
-  font-size: 25px;
+    font-size: 25px;
 }
 
 .palette-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: var(--bg);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .popup {
-  display: none;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 500px; /* Adjust as needed */
-  max-height: 300px; /* Adjust as needed */
-  overflow: auto;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background-color: var(--fg); /* Using var(--fg) */
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 500px; /* Adjust as needed */
+    max-height: 300px; /* Adjust as needed */
+    overflow: auto;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--fg); /* Using var(--fg) */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .img-container {
-  width: calc(33.33% - 10px); /* Adjust according to your grid */
-  position: relative;
-  height: 100px;
+    width: calc(33.33% - 10px); /* Adjust according to your grid */
+    position: relative;
+    height: 100px;
 }
 
 .img-container img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .img-container p {
-  display: none;
+    display: none;
 }
 
 .img-container:hover p,
 .img-container.clicked p {
-  display: block;
+    display: block;
 }
 
 .popup img:hover {
-  opacity: 0.7;
-  cursor: pointer;
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .popup img.clicked {
-  opacity: 1;
+    opacity: 1;
 }
 
 
 @media (max-width: 413px) {
-  body {
-    margin: 10px;
-  }
-  #sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: var(--bgspcl);
-    backdrop-filter: blur(20px);
-    opacity: 1;
-    flex-direction: column;
-    border-left: solid;
-    border-color: var(--color1);
-  }
-  #sidebar > a {
-    padding: 15px 10px;
-    text-decoration: none;
-    color: var(--fg);
-  }
-  #logo {
-    font-size: 15px;
-    padding: 3px 0px 0px 0px;
-  }
-  nav {
-    padding: 10px 5px 5px 15px;
-  }
-  #navbar {
-    width: 10%;
-  }
-  #navbar > div {
-    display: none;
-  }
-  #navbar > a > #menu {
-    height: 10px;
-    color: var(--fg);
-  }
-  #welcomebox {
-    width: 100%;
-    height: 90%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 17px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #selectcrs {
-    font-size: 17px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 15px;
-    height: 10%;
-  }
-  #streams {
-    overflow: hidden;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    body {
+        margin: 10px;
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: var(--bgspcl);
+        backdrop-filter: blur(20px);
+        opacity: 1;
+        flex-direction: column;
+        border-left: solid;
+        border-color: var(--color1);
+    }
+
+    #sidebar > a {
+        padding: 15px 10px;
+        text-decoration: none;
+        color: var(--fg);
+    }
+
+    #logo {
+        font-size: 15px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    nav {
+        padding: 10px 5px 5px 15px;
+    }
+
+    #navbar {
+        width: 10%;
+    }
+
+    #navbar > div {
+        display: none;
+    }
+
+    #navbar > a > #menu {
+        height: 10px;
+        color: var(--fg);
+    }
+
+    #welcomebox {
+        width: 100%;
+        height: 90%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 17px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 17px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 15px;
+        height: 10%;
+    }
+
+    #streams {
+        overflow: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 414px) {
-  body {
-    margin: 10px;
-  }
-  #sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: var(--bgspcl);
-    backdrop-filter: blur(20px);
-    opacity: 1;
-    flex-direction: column;
-    border-left: solid;
-    border-color: var(--color1);
-  }
-  #sidebar > a {
-    padding: 12px 10px;
-    color: var(--fg);
-    font-size: 17px;
-    text-decoration: none;
-  }
-  #logo {
-    font-size: 15px;
-    padding: 7px 0px 0px 0px;
-  }
-  nav {
-    padding: 5px 5px 5px 10px;
-  }
-  #navbar {
-    width: 10%;
-  }
-  #navbar > div {
-    display: none;
-  }
-  #navbar > a > #menu {
-    color: var(--fg);
-    padding: 2.5px 0px 0px 0px;
-    margin: 0px 0px 5px 0px;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 100%;
-    height: 90%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 17px;
-    margin: 7px 0px;
-  }
-  #welcomebox > #selectcrs {
-    font-size: 17px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 15px;
-    padding: 20px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    body {
+        margin: 10px;
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: var(--bgspcl);
+        backdrop-filter: blur(20px);
+        opacity: 1;
+        flex-direction: column;
+        border-left: solid;
+        border-color: var(--color1);
+    }
+
+    #sidebar > a {
+        padding: 12px 10px;
+        color: var(--fg);
+        font-size: 17px;
+        text-decoration: none;
+    }
+
+    #logo {
+        font-size: 15px;
+        padding: 7px 0px 0px 0px;
+    }
+
+    nav {
+        padding: 5px 5px 5px 10px;
+    }
+
+    #navbar {
+        width: 10%;
+    }
+
+    #navbar > div {
+        display: none;
+    }
+
+    #navbar > a > #menu {
+        color: var(--fg);
+        padding: 2.5px 0px 0px 0px;
+        margin: 0px 0px 5px 0px;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 100%;
+        height: 90%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 17px;
+        margin: 7px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 17px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 601px) {
-  body {
-    margin: 10px;
-  }
-  #sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: var(--bgspcl);
-    backdrop-filter: blur(20px);
-    opacity: 1;
-    flex-direction: column;
-    border-left: solid;
-    border-color: var(--color1);
-  }
-  #sidebar > a {
-    padding: 15px 10px;
-    color: var(--fg);
-    font-size: 20px;
-    text-decoration: none;
-  }
-  #logo {
-    font-size: 20px;
-    padding: 3px 0px 0px 0px;
-  }
-  nav {
-    padding: 10px 10px 10px 15px;
-  }
-  #navbar {
-    width: 10%;
-  }
-  #navbar > div {
-    display: none;
-  }
-  #navbar > a > #menu {
-    color: var(--fg);
-    padding: 2.5px 0px 0px 0px;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 100%;
-    height: 90%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 22px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #selectcrs {
-    font-size: 22px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 22px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    body {
+        margin: 10px;
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: var(--bgspcl);
+        backdrop-filter: blur(20px);
+        opacity: 1;
+        flex-direction: column;
+        border-left: solid;
+        border-color: var(--color1);
+    }
+
+    #sidebar > a {
+        padding: 15px 10px;
+        color: var(--fg);
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    #logo {
+        font-size: 20px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    nav {
+        padding: 10px 10px 10px 15px;
+    }
+
+    #navbar {
+        width: 10%;
+    }
+
+    #navbar > div {
+        display: none;
+    }
+
+    #navbar > a > #menu {
+        color: var(--fg);
+        padding: 2.5px 0px 0px 0px;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 100%;
+        height: 90%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 22px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 22px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 22px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 768px) {
-  body {
-    margin: 10px;
-  }
-  #sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: var(--bgspcl);
-    backdrop-filter: blur(20px);
-    opacity: 1;
-    flex-direction: column;
-    border-left: solid;
-    border-color: var(--color1);
-  }
-  #sidebar > a {
-    padding: 15px 10px;
-    color: var(--fg);
-    font-size: 20px;
-    text-decoration: none;
-  }
-  nav {
-    padding: 10px 10px 10px 15px;
-  }
-  #logo {
-    font-size: 20px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  #navbar > a {
-    display: none;
-  }
-  #navbar > div {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 17px;
-    padding: 0px 10%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 70%;
-    height: 70%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 150px;
-    grid-column-gap: 20px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    body {
+        margin: 10px;
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: var(--bgspcl);
+        backdrop-filter: blur(20px);
+        opacity: 1;
+        flex-direction: column;
+        border-left: solid;
+        border-color: var(--color1);
+    }
+
+    #sidebar > a {
+        padding: 15px 10px;
+        color: var(--fg);
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    nav {
+        padding: 10px 10px 10px 15px;
+    }
+
+    #logo {
+        font-size: 20px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    #navbar > a {
+        display: none;
+    }
+
+    #navbar > div {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 17px;
+        padding: 0px 10%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 70%;
+        height: 70%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 150px;
+        grid-column-gap: 20px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 800px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 10px 10px 10px 15px;
-  }
-  #logo {
-    font-size: 20px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 17px;
-    padding: 0px 6%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 70%;
-    height: 80%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 22px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 22px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 120px;
-    grid-column-gap: 22px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    body {
+        margin: 10px;
+    }
+
+    nav {
+        padding: 10px 10px 10px 15px;
+    }
+
+    #logo {
+        font-size: 20px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 17px;
+        padding: 0px 6%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 70%;
+        height: 80%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 22px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 22px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 120px;
+        grid-column-gap: 22px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 962px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 10px 10px 10px 25px;
-  }
-  #logo {
-    font-size: 17px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 15px;
-    padding: 0px 0px 0px 40%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 40%;
-    height: 70%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 23px;
-    margin: 10px 0px;
-  }
+    body {
+        margin: 10px;
+    }
 
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    margin: 7px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 100px;
-    grid-column-gap: 22px;
-    grid-row-gap: 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    nav {
+        padding: 10px 10px 10px 25px;
+    }
+
+    #logo {
+        font-size: 17px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 15px;
+        padding: 0px 0px 0px 40%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 40%;
+        height: 70%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 23px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 100px;
+        grid-column-gap: 22px;
+        grid-row-gap: 0px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 1336px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 10px 10px 10px 25px;
-  }
-  #logo {
-    font-size: 17px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 15px;
-    padding: 0px 0px 0px 50%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 40%;
-    height: 60%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 23px;
-    margin: 10px 0px;
-  }
+    body {
+        margin: 10px;
+    }
 
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    margin: 7px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 90px;
-    grid-column-gap: 22px;
-    grid-row-gap: 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    nav {
+        padding: 10px 10px 10px 25px;
+    }
+
+    #logo {
+        font-size: 17px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 15px;
+        padding: 0px 0px 0px 50%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 40%;
+        height: 60%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 23px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 90px;
+        grid-column-gap: 22px;
+        grid-row-gap: 0px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 1440px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 10px 10px 10px 25px;
-  }
-  #logo {
-    font-size: 17px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 15px;
-    padding: 0px 0px 0px 50%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 40%;
-    height: 60%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 23px;
-    margin: 10px 0px;
-  }
+    body {
+        margin: 10px;
+    }
 
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    margin: 7px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 90px;
-    grid-column-gap: 22px;
-    grid-row-gap: 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    nav {
+        padding: 10px 10px 10px 25px;
+    }
+
+    #logo {
+        font-size: 17px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 15px;
+        padding: 0px 0px 0px 50%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 40%;
+        height: 60%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 23px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 90px;
+        grid-column-gap: 22px;
+        grid-row-gap: 0px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
-@media (min-width: 1536px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 10px 10px 10px 25px;
-  }
-  #logo {
-    font-size: 17px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 15px;
-    padding: 0px 0px 0px 50%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 35%;
-    height: 80%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 23px;
-    margin: 10px 0px;
-  }
 
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    margin: 7px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 90px;
-    grid-column-gap: 22px;
-    grid-row-gap: 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+@media (min-width: 1536px) {
+    body {
+        margin: 10px;
+    }
+
+    nav {
+        padding: 10px 10px 10px 25px;
+    }
+
+    #logo {
+        font-size: 17px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 15px;
+        padding: 0px 0px 0px 50%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 35%;
+        height: 80%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 23px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 90px;
+        grid-column-gap: 22px;
+        grid-row-gap: 0px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
-@media (min-width: 1536px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 10px 10px 10px 25px;
-  }
-  #logo {
-    font-size: 17px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 15px;
-    padding: 0px 0px 0px 50%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 35%;
-    height: 80%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 23px;
-    margin: 10px 0px;
-  }
 
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    margin: 7px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 90px;
-    grid-column-gap: 22px;
-    grid-row-gap: 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+@media (min-width: 1536px) {
+    body {
+        margin: 10px;
+    }
+
+    nav {
+        padding: 10px 10px 10px 25px;
+    }
+
+    #logo {
+        font-size: 17px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 15px;
+        padding: 0px 0px 0px 50%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 35%;
+        height: 80%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 23px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 90px;
+        grid-column-gap: 22px;
+        grid-row-gap: 0px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 @media (min-width: 1920px) {
-  body {
-    margin: 10px;
-  }
-  nav {
-    padding: 15px 15px 15px 25px;
-  }
-  #logo {
-    font-size: 20px;
-    padding: 3px 0px 0px 0px;
-  }
-  #navbar > div > a {
-    color: var(--fg);
-    font-size: 17px;
-    padding: 0px 0px 0px 50%;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  #welcomebox {
-    width: 40%;
-    height: 60%;
-  }
-  #welcomebox > #wlcmbit {
-    font-size: 23px;
-    margin: 10px 0px;
-  }
+    body {
+        margin: 10px;
+    }
 
-  #welcomebox > #selectcrs {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
-  #welcomebox > #streams > a {
-    font-size: 20px;
-    padding: 20px;
-    margin: 7px;
-    text-align: center;
-  }
-  #streams {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 90px;
-    grid-column-gap: 22px;
-    grid-row-gap: 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    nav {
+        padding: 15px 15px 15px 25px;
+    }
+
+    #logo {
+        font-size: 20px;
+        padding: 3px 0px 0px 0px;
+    }
+
+    #navbar > div > a {
+        color: var(--fg);
+        font-size: 17px;
+        padding: 0px 0px 0px 50%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #welcomebox {
+        width: 40%;
+        height: 60%;
+    }
+
+    #welcomebox > #wlcmbit {
+        font-size: 23px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #selectcrs {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    #welcomebox > #streams > a {
+        font-size: 20px;
+        padding: 20px;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #streams {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 90px;
+        grid-column-gap: 22px;
+        grid-row-gap: 0px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
