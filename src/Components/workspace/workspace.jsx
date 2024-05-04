@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './workspace.module.css'
 
 class Workspace extends React.Component {
     constructor(props) {
@@ -22,6 +22,7 @@ class Workspace extends React.Component {
         this.setState({selectedFile: file});
     }
 
+
     render() {
 
 
@@ -31,14 +32,7 @@ class Workspace extends React.Component {
 
             <div className="file-explorer" style={{display: 'flex', alignItems: 'stretch', height: '96vh'}}>
 
-                <div className="subjects-pane" style={{
-                    backgroundColor: "var(--bg)",
-                    color: 'var(--fg)',
-                    padding: '5px',
-                    //flex: '1',
-                    width: "20%",
-                    borderRadius: '10px'
-                }}>
+                <div className={styles.leftpane}>
                     <h2>Subjects</h2>
                     <hr/>
                     <ul style={{listStyle: 'none', padding: 25}}>

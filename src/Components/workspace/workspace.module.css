@@ -1,0 +1,9 @@
+.leftpane{
+    background-color: color-mix(in srgb, var(--bg) 70%, transparent);
+    color: var(--fg);
+    padding: 5px;
+    /*flex: '1',*/
+    width: 20%;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+}
