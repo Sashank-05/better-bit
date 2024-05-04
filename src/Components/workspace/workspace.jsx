@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Workspace extends React.Component {
     constructor(props) {
         super(props);
@@ -22,33 +23,39 @@ class Workspace extends React.Component {
     }
 
     render() {
+
+
         const {subjects, selectedSubject, selectedFile} = this.state;
 
         return (
-            <div className="file-explorer" style={{display: 'flex', alignItems: 'stretch'}}>
+
+            <div className="file-explorer" style={{display: 'flex', alignItems: 'stretch', height: '96vh'}}>
+
                 <div className="subjects-pane" style={{
                     backgroundColor: "var(--bg)",
                     color: 'var(--fg)',
                     padding: '5px',
-                    height: '100%',
-                    width: '20%',
+                    //flex: '1',
+                    width: "20%",
                     borderRadius: '10px'
                 }}>
                     <h2>Subjects</h2>
                     <hr/>
-                    <ul style={{listStyle: 'none', padding: 0}}>
+                    <ul style={{listStyle: 'none', padding: 25}}>
                         {subjects.map(subject => (
                             <div>
+                                <hr/>
                                 <li key={subject.id} className={selectedSubject === subject.id ? 'selected' : ''}
                                     onClick={() => this.handleSubjectClick(subject.id)} style={{cursor: 'pointer'}}>
                                     {subject.name}
                                 </li>
-                                <hr/>
+
                             </div>
                         ))}
+                        <hr/>
                     </ul>
                 </div>
-                <div className="files-pane" style={{flex: 2, padding: '10px'}}>
+                <div className="files-pane" style={{flex: '2', padding: '10px'}}>
                     <h2>Files</h2>
                     {selectedSubject && (
                         <ul style={{listStyle: 'none', padding: 0}}>
@@ -66,4 +73,27 @@ class Workspace extends React.Component {
     }
 }
 
-export default Workspace;
+const Background = () => {
+    const backgroundStyle = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: "var(--bg-image)",
+        filter: 'blur(0px)',
+        zIndex: -1,
+    };
+
+    return <div style={backgroundStyle}></div>;
+}
+const WorkspaceExp = () => {
+
+    return (
+        <div>
+            <Background/>
+            <Workspace/>
+        </div>
+    )
+};
+export default WorkspaceExp;

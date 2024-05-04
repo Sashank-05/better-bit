@@ -2,9 +2,7 @@ import React from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import MainContent from "./Components/main-content/MainContent";
-import Workspace from "./Components/workspace/workspace"; // Capitalized component name
-
-
+import WorkspaceExp from "./Components/workspace/workspace";
 
 
 export default function App() {
@@ -16,7 +14,7 @@ export default function App() {
         },
         {
             path: "workspace",
-            element: <Workspace/>,
+            element: <WorkspaceExp/>,
         },
     ]);
 
