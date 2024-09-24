@@ -1,1 +1,1 @@
-# Better BIT
+# BIT by bit
