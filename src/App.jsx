@@ -1,13 +1,12 @@
-import React from 'react'
-
+import React from 'react';
 import Navbar from './components/Navbar';
-import JsonNavigator from './components/JsonNavigator'
+import JsonNavigator from './components/JsonNavigator';
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app h-screen overflow-hidden flex flex-col bg-gray-900">
       <Navbar />
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex-grow flex items-center justify-center">
         <JsonNavigator />
       </div>
     </div>
