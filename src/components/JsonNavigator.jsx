@@ -34,6 +34,38 @@ const jsonData = {
         },
       },
     },
+    "Information Science Engineering": {
+      Semesters: {
+        1: {
+          "Module Wise Notes": ["Module 1", "Module 2", "Module 3", "Module 4"],
+          "Books": ["Book 1", "Book 2", "Book 3"],
+          "Previous Year Papers": ["2019", "2020", "2021"],
+          "Syllabus": ["Syllabus"],
+        },
+        2: {
+          "Module Wise Notes": ["Module 1", "Module 2", "Module 3", "Module 4"],
+          "Books": ["Book 1", "Book 2", "Book 3"],
+          "Previous Year Papers": ["2019", "2020", "2021"],
+          "Syllabus": ["Syllabus"],
+        },
+      },
+    },
+    "AI&ML": {
+      Semesters: {
+        1: {
+          "Module Wise Notes": ["Module 1", "Module 2", "Module 3", "Module 4"],
+          "Books": ["Book 1", "Book 2", "Book 3"],
+          "Previous Year Papers": ["2019", "2020", "2021"],
+          "Syllabus": ["Syllabus"],
+        },
+        2: {
+          "Module Wise Notes": ["Module 1", "Module 2", "Module 3", "Module 4"],
+          "Books": ["Book 1", "Book 2", "Book 3"],
+          "Previous Year Papers": ["2019", "2020", "2021"],
+          "Syllabus": ["Syllabus"],
+        },
+      },
+    },
   },
 };
 
@@ -77,7 +109,7 @@ const JsonNavigator = () => {
   const renderContent = () => {
     if (path.length === 1) {
       return (
-        <>
+        <div className="overflow-y-auto h-64 w-full">
           {Object.keys(currentData).map((key) => (
             <button
               key={key}
@@ -86,12 +118,12 @@ const JsonNavigator = () => {
                 setPath(newPath);
                 navigateTo(newPath);
               }}
-              className="border-2 border-gray-700 text-lg text-gray-300 rounded-lg p-4 transition transform hover:bg-gray-700 hover:text-white hover:scale-105 focus:outline-none"
+              className="border-2 border-gray-700 text-lg text-gray-300 rounded-lg p-4 transition transform hover:bg-gray-700 hover:text-white hover:scale-105 focus:outline-none w-full text-left"
             >
               {key}
             </button>
           ))}
-        </>
+        </div>
       );
     } else if (path.length === 2 && Object.keys(currentData).length === 1) {
       const singleKey = Object.keys(currentData)[0];
@@ -145,7 +177,7 @@ const JsonNavigator = () => {
       );
     } else {
       return (
-        <>
+        <div className="overflow-y-auto h-64 w-full">
           {Object.keys(currentData).map((key) => (
             <button
               key={key}
@@ -158,18 +190,18 @@ const JsonNavigator = () => {
                   navigateTo(newPath);
                 }
               }}
-              className="border-2 border-gray-700 text-lg text-gray-300 rounded-lg p-4 transition transform hover:bg-gray-700 hover:text-white hover:scale-105 focus:outline-none"
+              className="border-2 border-gray-700 text-lg text-gray-300 rounded-lg p-4 transition transform hover:bg-gray-700 hover:text-white hover:scale-105 focus:outline-none w-full text-left"
             >
               {key}
             </button>
           ))}
-        </>
+        </div>
       );
     }
   };
 
   return (
-    <div className={`bg-gray-800 p-6 rounded-2xl shadow-lg ${path.length < 4 ? 'w-1/2 h-1/2 flex flex-col items-center justify-center' : 'w-full h-full'}`}>
+    <div className={`bg-gray-800 p-6 rounded-2xl shadow-lg ${path.length < 4 ? 'w-1/2 h-3/4' : 'w-full h-full'}`}>
       <div className="flex flex-col mb-4 gap-4 w-full">
         <div className="flex gap-4">
           <div className="flex-none">

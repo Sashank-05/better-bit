@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="app h-screen overflow-hidden flex flex-col bg-gray-900">
       <Navbar />
-      <div className="flex-grow flex items-center justify-center">
+      <div className="flex-grow p-4 flex items-center justify-center">
         <JsonNavigator />
       </div>
     </div>
